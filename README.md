@@ -18,7 +18,7 @@ ws_std = 13.06
 ​
 
 # What is the difference between 50th percentile and 75th percentile of average temperature
-p1 = c_data['Average temperature (°F)']
+p1 = c_data['Average temperature (°F)']    <br\>
 pran =  round(np.percentile(p1,50,interpolation='lower') - np.percentile(p1,75,interpolation='lower'),2)
 print(pran)
 p_range = 12.20
