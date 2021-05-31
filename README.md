@@ -1,25 +1,25 @@
 # EDA-Question-Anwser
 wings-MFAO-Exploratory data analysis's 
 
-import pandas as pd
-import numpy as np
+import pandas as pd  
+import numpy as np  
 
 
 ### Read the data (this will not be graded)
 
-c_data = pd.read_csv('data.csv')
+c_data = pd.read_csv('data.csv')  
 print(c_data)
 
 # What is the standard deviation of maximum windspeed across all the days
-ws_std1 = round(c_data.std(axis=0,skipna=True)['Maximum windspeed (mph)'],2)
-print(ws_std1)
-ws_std = 13.06
+ws_std1 = round(c_data.std(axis=0,skipna=True)['Maximum windspeed (mph)'],2)  
+print(ws_std1)  
+ws_std = 13.06  
 
 ​
 
 # What is the difference between 50th percentile and 75th percentile of average temperature
-p1 = c_data['Average temperature (°F)']    <br\>
-pran =  round(np.percentile(p1,50,interpolation='lower') - np.percentile(p1,75,interpolation='lower'),2)
+p1 = c_data['Average temperature (°F)']   
+pran =  round(np.percentile(p1,50,interpolation='lower') - np.percentile(p1,75,interpolation='lower'),2)  
 print(pran)
 p_range = 12.20
 
@@ -125,7 +125,7 @@ median_b_days = 534
 ​
 ​
 # ​Out of all the available records how many days are within one standard deviation of average temperaturem
-# 0
+
 p5 = c_data[['Day','Average temperature (°F)']]
 stdv  = round(p5.std(axis=0,skipna=True)['Average temperature (°F)'],2)
 p5.rename(columns={'Average temperature (°F)':'tb',},inplace=True)
